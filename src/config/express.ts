@@ -6,8 +6,8 @@ import { validate, ValidationError } from 'class-validator';
 import { ActionParameterHandler } from 'routing-controllers/ActionParameterHandler';
 import { plainToClass } from 'class-transformer';
 import * as bodyParser from 'body-parser';
-import { HelloController } from '../controller/HelloController';
-import { UserController } from '../controller/UserController';
+import { HelloController } from 'helloController.ts';
+import { UserController } from 'userController.ts';
 
 export class ExpressConfig {
     app: express.Express;

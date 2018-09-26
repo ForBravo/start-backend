@@ -1,6 +1,6 @@
 import { Service } from 'typedi';
 import { User } from '../model/user';
-import { CreateUserDto } from '../dto/CreateUserDto';
+import { CreateUserDto } from 'createUserDto.ts';
 
 @Service()
 export class UserRepository {

@@ -1,7 +1,7 @@
 import { Service } from 'typedi';
 import { Body, Delete, Get, JsonController, OnUndefined, Param, Post } from 'routing-controllers';
 import { UserRepository } from '../repository/userRepository';
-import { CreateUserDto } from '../dto/CreateUserDto';
+import { CreateUserDto } from 'createUserDto.ts';
 
 @Service()
 @JsonController('/users')
