@@ -9,7 +9,7 @@ export class Application {
 
     constructor() {
 
-        setupMongoose;
+        setupMongoose();
 
         this.express = new ExpressConfig();
 

@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import * as express from 'express';
 import { Container } from 'typedi';
 import { BadRequestError, useContainer, useExpressServer } from 'routing-controllers';
@@ -6,6 +7,7 @@ import { ActionParameterHandler } from 'routing-controllers/ActionParameterHandl
 import { plainToClass } from 'class-transformer';
 import * as bodyParser from 'body-parser';
 import { HelloController } from '../controller/HelloController';
+import { UserController } from '../controller/UserController';
 
 export class ExpressConfig {
     app: express.Express;
@@ -76,9 +78,10 @@ export class ExpressConfig {
             routePrefix: '/api',
             controllers: [
                 HelloController,
+                UserController
             ],
             middlewares: [],
-            defaultErrorHandler: false,
+            defaultErrorHandler: true,
             classTransformer: false,
             validation: true,
             cors: true
